@@ -3,40 +3,28 @@
      box-sizing: border-box;
 }
 
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
+html {
+     font-size: 62.5%;
+     text-align: center;
+}
+
+#gameboard {
+     max-width: 60rem;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(3,1fr);
+     row-gap: 2rem;
+     column-gap: 2rem;
+}
+
+.block {
+     width: 100%;
+     background: lightblue;
+}
+
+.block:after {
+     content: "";
      display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-	clear: both;
-}
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
-
-body {
-
-}
-
-
-/******************************************
-/* LAYOUT
-/*******************************************/
-header {
-
-}
-
-footer {
-
-}
-
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+     padding-bottom: 100%;
+   }
